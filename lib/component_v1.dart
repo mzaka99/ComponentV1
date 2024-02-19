@@ -206,8 +206,8 @@ ThemeData _getTheme({
         dragHandleSize: const Size(52, 6),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
+            topLeft: Radius.circular(24),
+            topRight: Radius.circular(24),
           ),
         ),
         dragHandleColor: colorScheme.surfaceVariant,
@@ -244,6 +244,10 @@ ThemeData _getTheme({
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(2),
         ),
+      ),
+      tooltipTheme: const TooltipThemeData(
+        margin: EdgeInsets.symmetric(horizontal: 20),
+        triggerMode: TooltipTriggerMode.tap,
       ),
       extensions: extensions,
     );
