@@ -226,7 +226,8 @@ ThemeData _getTheme({
         visualDensity: VisualDensity.compact,
       ),
       dialogTheme: DialogTheme(
-        titleTextStyle: base.textTheme.titleMedium.boldStyle,
+        titleTextStyle: base.textTheme.titleMedium.boldStyle
+            .copyWith(color: colorScheme.onSurface),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         ),
