@@ -17,6 +17,7 @@ ThemeData _getTheme({
           bodyColor: colorScheme.onSurface,
           displayColor: colorScheme.onSurface),
       appBarTheme: AppBarTheme(
+        backgroundColor: base.scaffoldBackgroundColor,
         centerTitle: true,
         scrolledUnderElevation: 0,
         foregroundColor: colorScheme.onBackground,
