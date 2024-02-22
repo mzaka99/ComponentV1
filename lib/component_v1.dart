@@ -252,31 +252,29 @@ ThemeData _getTheme({
       extensions: extensions,
     );
 
-ThemeData lightTheme({
+ThemeData baseLightThemev1({
   required TextTheme textTheme,
-  required Color primaryColor,
+  required ColorScheme colorScheme,
   Iterable<ThemeExtension<dynamic>>? extensions,
 }) {
   var theme = _getTheme(
     base: ThemeData.light().copyWith(textTheme: textTheme),
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: primaryColor,
-    ),
+    colorScheme: colorScheme,
     extensions: extensions,
     // customColors: lightCustomColors,
   );
   return theme;
 }
 
-ThemeData darkTheme({
+ThemeData baseDarkThemev1({
   required TextTheme textTheme,
-  required Color primaryColor,
+  required ColorScheme colorScheme,
   Iterable<ThemeExtension<dynamic>>? extensions,
 }) =>
     _getTheme(
       base: ThemeData.dark().copyWith(textTheme: textTheme),
-      colorScheme: ColorScheme.fromSeed(
-          seedColor: primaryColor, brightness: Brightness.dark),
+      colorScheme: colorScheme,
+
       // customColors: darkCustomColors,
       extensions: extensions,
     );
