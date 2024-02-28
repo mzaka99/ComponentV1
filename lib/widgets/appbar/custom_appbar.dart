@@ -7,6 +7,7 @@ class CustomAppBarV1 extends AppBar {
     Widget? title,
     List<Widget>? actions,
     bool? firstScreen = false,
+    PreferredSizeWidget? bottom,
     Function()? onTapBack,
   }) : super(
           key: key,
@@ -14,6 +15,7 @@ class CustomAppBarV1 extends AppBar {
           scrolledUnderElevation: 0,
           toolbarHeight: 60,
           title: title,
+          bottom: bottom,
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           // foregroundColor: Theme.of(context).colorScheme.onBackground,
           leading: firstScreen == true
