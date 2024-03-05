@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class CustomLabelWidget extends StatelessWidget {
@@ -6,13 +7,17 @@ class CustomLabelWidget extends StatelessWidget {
   final Color? labelColor;
   final bool? withBackground;
   final TextStyle? labelTextStyle;
+  final int? maxLines;
+  final TextOverflow? overflow;
   const CustomLabelWidget({
     Key? key,
     this.backgroundColor,
     required this.labelText,
     this.labelColor,
-    this.labelTextStyle,
     this.withBackground = true,
+    this.labelTextStyle,
+    this.maxLines,
+    this.overflow,
   }) : super(key: key);
 
   @override
@@ -34,6 +39,8 @@ class CustomLabelWidget extends StatelessWidget {
           ),
           child: Text(
             labelText,
+            overflow: overflow,
+            maxLines: maxLines,
             style: labelTextStyle ??
                 Theme.of(context).textTheme.labelMedium?.copyWith(
                       fontWeight: FontWeight.w500,
