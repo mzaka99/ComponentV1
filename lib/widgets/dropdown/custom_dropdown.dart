@@ -47,22 +47,27 @@ class CustomDropdownV1<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          children: [
-            Text(title ?? "",
-                style: titleTextStyle ??
-                    Theme.of(context).textTheme.bodyMedium?.onSurface(context)),
-            if (isRequired)
-              Text(
-                '*',
-                style: titleTextStyle ??
-                    Theme.of(context).textTheme.bodyMedium.error(context),
-              ),
-          ],
-        ),
-        const SizedBox(
-          height: 10,
-        ),
+        if (title != null)
+          Row(
+            children: [
+              Text(title ?? "",
+                  style: titleTextStyle ??
+                      Theme.of(context)
+                          .textTheme
+                          .bodyMedium
+                          ?.onSurface(context)),
+              if (isRequired)
+                Text(
+                  '*',
+                  style: titleTextStyle ??
+                      Theme.of(context).textTheme.bodyMedium.error(context),
+                ),
+            ],
+          ),
+        if (title != null)
+          const SizedBox(
+            height: 10,
+          ),
         DropdownSearch<T>(
           enabled: enabled,
           autoValidateMode: AutovalidateMode.onUserInteraction,
