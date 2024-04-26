@@ -81,6 +81,7 @@ class CustomTextFieldV1 extends StatelessWidget {
             height: 10,
           ),
         TextFormField(
+          autovalidateMode: autoValidateMode,
           focusNode: focusNode,
           enabled: enabled,
           maxLines: maxLines,
